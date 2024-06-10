@@ -1,8 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "affected": {
-    "defaultBase": "develop"
-  },
+  "affected": { "defaultBase": "develop" },
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx-cloud",
@@ -13,15 +11,9 @@
     }
   },
   "targetDefaults": {
-    "build": {
-      "inputs": ["default", "production", "^production"]
-    },
-    "e2e": {
-      "inputs": ["default", "^production"]
-    },
-    "test": {
-      "inputs": ["default", "^production"]
-    },
+    "build": { "inputs": ["default", "production", "^production"] },
+    "e2e": { "inputs": ["default", "^production"] },
+    "test": { "inputs": ["default", "^production"] },
     "lint": {
       "inputs": [
         "default",
@@ -44,27 +36,11 @@
   },
   "generators": {
     "@nx/react": {
-      "application": {
-        "style": "styled-components",
-        "linter": "eslint",
-        "bundler": "vite",
-        "babel": true
-      },
-      "component": {
-        "style": "styled-components"
-      },
-      "library": {
-        "style": "styled-components",
-        "linter": "eslint",
-        "unitTestRunner": "jest"
-      }
+      "application": { "style": "styled-components", "linter": "eslint", "bundler": "vite", "babel": true },
+      "component": { "style": "styled-components" },
+      "library": { "style": "styled-components", "linter": "eslint", "unitTestRunner": "jest" }
     },
-    "@nx/next": {
-      "application": {
-        "style": "styled-components",
-        "linter": "eslint"
-      }
-    }
+    "@nx/next": { "application": { "style": "styled-components", "linter": "eslint" } }
   },
   "plugins": [
     {
@@ -78,10 +54,8 @@
     },
     {
       "plugin": "@nx/eslint-plugin",
-      "options": {
-        "targetName": "lint",
-        "extensions": ["ts", "tsx", "js", "jsx", "html", "vue"]
-      }
+      "options": { "targetName": "lint", "extensions": ["ts", "tsx", "js", "jsx", "html", "vue"] }
     }
-  ]
+  ],
+  "nxCloudAccessToken": "MjhjNTM4MTktNTkwYi00MzYwLTlmMTctYTM3NTdkMjExOGVifHJlYWQtd3JpdGU="
 }
